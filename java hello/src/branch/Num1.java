@@ -37,35 +37,22 @@ public class Num1 {
 	 */
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int avg=0,hong=0,kim=0,kg=0;
-		String ans="",name="";
+		int avg=0,hong=0;
+		String ans1="",name="",ans2="",ans3="";
 		
 	
-	System.out.println("이름을 입력해주세요");	
-		name=scanner.next();		
-	System.out.println("홍길동점수입력");
+	System.out.println("첫번째 이름을 입력해주세요");	
+		name=scanner.next();
+		System.out.println("두번째 이름을 입력해주세요");	
+		name=scanner.next();
+		System.out.println("셋번째 이름을 입력해주세요");	
+		name=scanner.next();
+	System.out.println("점수를 입력해주세요");
 		hong=scanner.nextInt();
-	System.out.println("김유신점수입력");
-	    kim=scanner.nextInt();
-	System.out.println("김구점수입력");
-		kg=scanner.nextInt();
-	
-	switch (avg) {
-	case 1: 
-		ans = "1등입니다";
-		break;
-	case 2: 
-		ans = "2등입니다";
-		break;
-	case 3: 
-		ans = "3등입니다";
-		break;
 
-	default:
-		System.out.println("다시 입력해주세요");
-		return;
-	}
-		System.out.println();
-		
-	}
-}
+		if (avg==10) {
+			System.out.println("입력된 정수값"+avg+"은 10입니다");
+		} else {
+	System.out.println("입력된 정수값"+avg+"이 10이 아닙니다");
+		}
+	}}

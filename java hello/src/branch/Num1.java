@@ -3,6 +3,10 @@
  */
 package branch;
 
+import java.util.Scanner;
+
+import com.sun.org.apache.xalan.internal.xsltc.compiler.sym;
+
 /**
  *@date   : 2016. 6. 9.
  *@author : 박승주
@@ -32,6 +36,36 @@ public class Num1 {
 	 * ===============
 	 */
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int avg=0,hong=0,kim=0,kg=0;
+		String ans="",name="";
+		
+	
+	System.out.println("이름을 입력해주세요");	
+		name=scanner.next();		
+	System.out.println("홍길동점수입력");
+		hong=scanner.nextInt();
+	System.out.println("김유신점수입력");
+	    kim=scanner.nextInt();
+	System.out.println("김구점수입력");
+		kg=scanner.nextInt();
+	
+	switch (avg) {
+	case 1: 
+		ans = "1등입니다";
+		break;
+	case 2: 
+		ans = "2등입니다";
+		break;
+	case 3: 
+		ans = "3등입니다";
+		break;
+
+	default:
+		System.out.println("다시 입력해주세요");
+		return;
+	}
+		System.out.println();
 		
 	}
 }

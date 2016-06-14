@@ -31,7 +31,10 @@ public class oddeven {
 		 
 		 switch (num%2) {
 		case 1:
+			if (num%2==usernum) {
+							}
 			System.out.println("Win");
+						
 			break;
 
 		default:System.out.println("lose");

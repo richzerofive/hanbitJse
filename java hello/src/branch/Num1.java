@@ -37,22 +37,67 @@ public class Num1 {
 	 */
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int avg=0,hong=0;
-		String ans1="",name="",ans2="",ans3="";
+		int avg1=0,avg2=0,avg3=0,gradeA1=0,gradeA2=0,gradeA3=0;
+		String name1="",name2="",name3="",grade1="",grade2="",grade3="";
 		
 	
-	System.out.println("첫번째 이름을 입력해주세요");	
-		name=scanner.next();
-		System.out.println("두번째 이름을 입력해주세요");	
-		name=scanner.next();
-		System.out.println("셋번째 이름을 입력해주세요");	
-		name=scanner.next();
-	System.out.println("점수를 입력해주세요");
-		hong=scanner.nextInt();
-
-		if (avg==10) {
-			System.out.println("입력된 정수값"+avg+"은 10입니다");
+	System.out.println("이름,점수");	
+		name1=scanner.next();
+		avg1=scanner.nextInt();
+	System.out.println("이름,점수");
+		name2=scanner.next();
+		avg2=scanner.nextInt();
+		System.out.println("이름,점수를 입력해주세요");
+		name3=scanner.next();
+		avg3=scanner.nextInt();
+		
+		
+		if (avg1 > avg2 && avg1 > avg3) {
+			grade1 = name1;
+			gradeA1 = avg1;
+			 if(avg2 > avg3) {
+				grade2 = "name2";
+				gradeA2 = avg2;
+				grade3 = "name3";
+				gradeA3 = avg3;
+			}  {
+				grade2 = "name3";
+				gradeA2 = avg3;
+				grade3 = "name2";
+				gradeA3 = avg2;
+			}
+		}   if (avg2 > avg3) {
+			grade1 = "name2";
+			gradeA1 = avg2;
+			if (avg1 > avg3) {
+				grade2 = "name1";
+				gradeA2 = avg1;
+				grade3 = "name3";
+				gradeA3 = avg3;
+			} else {
+				grade2 = "name3";
+				gradeA2 = avg3;
+				grade3 = "name1";
+				gradeA3 = avg1;
+			}
 		} else {
-	System.out.println("입력된 정수값"+avg+"이 10이 아닙니다");
+			grade1 = "name3";
+			gradeA1 = avg3;
+			 if(avg1 > avg2) {
+				grade2 = "name1";
+				gradeA2 = avg1;
+				grade3 = "name2";
+				gradeA3 = avg2;
+			} else  {
+				grade2 = "name2";
+				gradeA2 = avg2;
+				grade3 = "name1";
+				gradeA3 = avg1;
+			}
 		}
+		
+		System.out.printf(" 1 등 : %의 점수는 % D \n ", grade1, gradeA1);
+		System.out.printf(" 1 등 : %의 점수는 % D \n ", grade1, gradeA1);
+		System.out.printf(" 1 등 : %의 점수는 % D \n ", grade1, gradeA1);
 	}}
+		

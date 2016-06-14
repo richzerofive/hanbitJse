@@ -7,13 +7,15 @@ import java.util.Scanner;
 
 import javax.swing.Spring;
 
+import com.sun.org.apache.bcel.internal.generic.MONITORENTER;
+
 /**
  * @date : 2016. 6. 9.
  * @author : 박승주
  * @file : MonthEnd.java
  * @story :
  */
-public class MonthEnd2 {
+public class MonthEnd3 {
 	/**
 	 * 년, 월을 입력하면 말일이 몇일인지 알려주는 프로그램. 단, 윤년 2월은 29일이고, 너머지 해는 28일로 마감입니다. 1~12를
 	 * 벗어난 숫자를 입력하면 잘못된 입력값입니다 라고 뜬다.
@@ -28,30 +30,32 @@ public class MonthEnd2 {
 	 */
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int monthResult = 0;
-		String mon = "";
-		System.out.println("년을 입력하세요(예)2016");
-		int year = scanner.nextInt();
-		System.out.println("월을 입력하세요(예)2");
-		int month = scanner.nextInt();
+		int month=0, year=0, day=0, MonthResult=0;
+		
+		
+		System.out.println("연도");
+		year=scanner.nextInt();
+		System.out.println("월");
+		month=scanner.nextInt();
 		switch (month) {
-		case 1:case 3:case 5:case 6:case 8:case 10:case 12:
-			monthResult = 31;
+		case 1: case 3: case 5: case 6 : case 8 : case 10 : case 12:;
+			MonthResult = 31;
 			break;
-		case 2:
-			monthResult=(year % 4 == 0 && year % 100 != 0 || year % 400 == 0)?29:28;			
+		case 2: 
+			MonthResult = (year % 4 == 0 || year % 100 != 0 && year % 400 == 0)?29:28; 
 			break;
 			
-			
-			 
-		case 4:case 7:case 9:case 11:
-			monthResult = 30;
+		case 4: case 7: case 9: case 11:;
+			MonthResult = 30;
+		
 			break;
 		default:
-			System.out.println("정확한달을 입력하세요");
-			return;
+			break;
 		}
-		System.out.println(month=monthResult);
+		System.out.printf("%d%s%d%s%d%s", year,"년",month,"월", MonthResult, "일");
+		
 
+		
+		
 	}
-}
+}	

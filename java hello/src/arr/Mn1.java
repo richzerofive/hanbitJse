@@ -20,7 +20,7 @@ public class Mn1 {
 	 */
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int number = 0, i = 0, maxi = 0, mini = 100,count = 0;
+		int number = 0, i = 0, maxi = 0, mini = 100;
 
 		System.out.println("학생수");
 		number = scanner.nextInt();
@@ -28,12 +28,12 @@ public class Mn1 {
 	
 
 		System.out.println("점수입력");
-		for (; i < count; i++) {
+		for (; i < number; i++) {
 			score[i] = scanner.nextInt();
-			if (i > i - 1)
-				maxi = i;
-			else if (i < i - 1)
-				mini = i;
+			if (score[i] > maxi)
+				maxi = score[i];
+			else if (score[i] < mini)
+				mini = score[i];
 		}
 
 		System.out.printf("최고점 : %d 최저점 : %d", maxi, mini);

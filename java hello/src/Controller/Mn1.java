@@ -14,10 +14,10 @@ public class Mn1 {
 
 		int max=0,min=100;
 		for (int i = 0; i < score.length; i++) {
-			if (i > i - 1)
-				max = i;
-			else if (i < i - 1)
-				min = i;
+			if (score[i] > max)
+				max = score[i];
+			else if (score[i] < min)
+				min = score[i];
 		}
 		
 		return "최고점="+max+"최하점="+min;

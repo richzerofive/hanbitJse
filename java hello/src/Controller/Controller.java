@@ -64,9 +64,7 @@ public class Controller {
 			case "7":
 				System.out.println("이름을 입력하세요");
 				int change=0;
-				System.out.println(tax.execute(s.next(), change, null));
 				System.out.println("연봉을 입력하세요");
-				System.out.println(tax.execute(menu, s.nextInt(), null));
 				System.out.println("세율이 바뀌었습니까?" + "그대로이면 1, 바뀌었으면 2 를 입력하세요");
 				int change2 = 0; Double taxRate = 0.0;
 				if (change==1) {
@@ -79,19 +77,12 @@ public class Controller {
 				JOptionPane.showConfirmDialog(null, "종료하시겠습니까?");
 				return;
 			default:
-				JOptionPane.showMessageDialog(null, "메뉴에 없는 번호입니다");
-				break;
-			}
-		}
-	}
-
-	/**
-	 * @param s
-	 */
-	private static void kaup(Scanner s) {
-
-	}
+				JOptionPane.showMessageDialog(null, "메뉴에 없는 번호입니다");}
+		}}
 }
-/**
- * @param s
- */
+			
+			
+		
+
+
+	

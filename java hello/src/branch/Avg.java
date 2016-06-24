@@ -9,7 +9,7 @@ package branch;
  *@file   : avg.java
  *@story  : 
 */
-public class avg {
+public class Avg {
 	
 	
 }	

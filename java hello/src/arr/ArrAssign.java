@@ -18,8 +18,8 @@ public class ArrAssign {
 		 */
 		Scanner scanner = new Scanner(System.in);
 		int i = 0;
-		int[] age = new int[5];
-		String[] name = new String[5];
+		int[] age = new int[2];
+		String[] name = new String[2];
 
 		{
 			for (; i < age.length; i++) {
